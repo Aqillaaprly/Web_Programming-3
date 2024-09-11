@@ -23,3 +23,9 @@ body{
     background: url(flower2.jpg);
     color: white;
 }
+
+body{
+    background: url('IMG/tree.jpg'), url('IMG/field1.jpg');
+    background-repeat: no-repeat, repeat;
+    color: white;
+}
