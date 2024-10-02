@@ -5,5 +5,7 @@ function perkenalan(){
     echo "Perkenalkan, nama saya Aqilla <br/>";
     echo "Senang berkenalan dengan Anda<br/>";
 }
-perkenalan();
+for ($i = 0; $i < 2; $i++) {
+    perkenalan();
+}
 ?>
