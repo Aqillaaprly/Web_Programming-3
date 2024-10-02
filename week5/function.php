@@ -1,9 +1,8 @@
 <?php
-
 //membuat fungsi
-function Perkenalan($nama, $salam){
+function Perkenalan($nama, $salam = "Assalamualaikum"){
     echo $salam . ", ";
-    echo "Perkenalan, nama saya " .$nama. "<br/>";
+    echo "Perkenalan, nama saya " . $nama . "<br/>";
     echo "Senang berkenalan dengan Anda<br/>";
 }
 
@@ -12,9 +11,8 @@ Perkenalan("Hamdana", "Hallo");
 
 echo "<hr>";
 
-$saya = "Aqilla";
+$saya = "Elok";
 $ucapanSalam = "Selamat pagi";
 
-//memanggil lagi
-Perkenalan($saya,$ucapanSalam);
-?>
+//memanggil lagi tanpa mengisi parameter salam
+Perkenalan($saya);
