@@ -55,12 +55,7 @@ h2 {
     font-size: 2rem;
     color: #2c3e50;
 }
-form label {
-    display: block;
-    margin-bottom: 10px;
-    font-size: 1.1rem;
-    color: #34495e;
-}
+
 form input {
     width: 350px;
     padding: 10px;
@@ -81,7 +76,7 @@ form button {
 }
 
 form button:hover {
-    background-color: #3498db;
+    background-color: gray;
 }
 
 /* Home Page Styling */
@@ -191,7 +186,7 @@ form button {
 }
 
 form button:hover {
-    background-color: grey;
+    background-color: black;
 }
 
 .result {
@@ -259,5 +254,5 @@ footer p {
 }
 
 .logout-message button:hover {
-    background-color: #0056b3;
+    background-color: black;
 }
