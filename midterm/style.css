@@ -49,6 +49,7 @@ body {
     border-radius: 15px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
 }
+
 h2 {
     text-align: center;
     margin-bottom: 20px;
@@ -64,6 +65,7 @@ form input {
     border-radius: 5px;
     font-size: 1rem;
 }
+
 form button {
     width: 350px;
     padding: 10px;
@@ -130,6 +132,7 @@ h3 {
 /* Price Check Page Styling */
 .price-check-container {
     max-width: 600px;
+    width: 90%;
     margin: 50px auto;
     padding: 30px;
     background-color: wheat;
@@ -141,7 +144,7 @@ h3 {
 
 h2 {
     text-align: center;
-    color:black;
+    color: black;
     font-size: 1.5rem;
 }
 
@@ -152,24 +155,6 @@ form label {
     margin-bottom: 10px;
     font-size: 1.1rem;
     color: #34495e;
-}
-
-form label input[type="radio"],
-form label input[type="checkbox"] {
-    margin-right: 10px;
-    margin-left: 10px;
-}
-
-form .room-options {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 500px;
-}
-
-form label span {
-    flex: 1;
 }
 
 form button {
@@ -189,6 +174,7 @@ form button:hover {
     background-color: black;
 }
 
+/* Results Section */
 .result {
     font-size: 1.2rem;
     margin-top: 20px;
@@ -197,10 +183,34 @@ form button:hover {
     font-weight: bold;
 }
 
+#totalPriceResult {
+    margin-bottom: 20px;
+}
+
+#totalPriceResult p {
+    font-size: 1.4rem;
+    color: #27ae60;
+}
+
+#additionalInfo {
+    display: none; /* Initially hide this section */
+    text-align: left;
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+#additionalInfo p {
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #333;
+}
 
 /* Footer Styles */
 footer {
-    background-color:#550000 ;
+    background-color: #550000;
     color: #fff; 
     text-align: center; 
     padding: 20px 0; 

@@ -1,10 +1,11 @@
 function calculatePrice() {
-    const floor = parseInt(document.getElementById('floor').value);
-    const stayLength = parseInt(document.getElementById('stay_length').value);
-    const roomType = document.querySelector('input[name="room_type"]:checked').value;
-    const discountType = document.querySelector('input[name="discount"]:checked').value;
+    var floor = document.getElementById('floor').value;
+    var roomType = document.querySelector('input[name="room_type"]:checked').value;
+    var stayLength = document.getElementById('stay_length').value;
+    var discount = document.querySelector('input[name="discount"]:checked').value;
 
-    let roomPrice = 0;
+    var roomPrice = 0;
+    var discountAmount = 0;
 
     if (roomType === 'standard') {
         roomPrice = 500000;
@@ -14,20 +15,21 @@ function calculatePrice() {
         roomPrice = 1500000;
     }
 
-    let totalPrice = roomPrice * stayLength;
+    var totalPriceBeforeDiscount = roomPrice * stayLength;
 
-    if (floor > 5) {
-        totalPrice += 100000;
+    if (discount === 'member') {
+        discountAmount = totalPriceBeforeDiscount * 0.10; // 10% discount
+        document.getElementById('discountType').innerHTML = "Discount: Member (10%)";
+    } else if (discount === 'birthday') {
+        discountAmount = totalPriceBeforeDiscount - 500; 
+        document.getElementById('discountType').innerHTML = "Discount: Birthday Promo (IDR 500)";
+    } else {
+        document.getElementById('discountType').innerHTML = "Discount: None";
     }
 
-    if (discountType === 'member') {
-        totalPrice *= 0.9; 
-    } else if (discountType === 'birthday') {
-        totalPrice -= 500; 
-    }
+    var finalPrice = totalPriceBeforeDiscount - discountAmount;
 
-  totalPrice = Math.max(totalPrice, 0);
-
-  const resultDiv = document.getElementById('totalPriceResult');
-  resultDiv.innerHTML = `<p>Total Price: IDR ${totalPrice.toLocaleString()}</p>`;
+    document.getElementById('totalPriceResult').innerHTML = "Total Price: IDR " + finalPrice.toLocaleString();
+    document.getElementById('totalPriceBeforeDiscount').innerHTML = "Price Before Discount: IDR " + totalPriceBeforeDiscount.toLocaleString();
+    document.getElementById('discountType').innerHTML = "Discount Type:  " + discount.toLocaleString();   
 }
